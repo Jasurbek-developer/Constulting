@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+section{
+    padding: 120px;
+    max-width: 1550px;
+}
+.main{
+    width: 100%;
+    height: 450px;
+    max-width: 1550px;
+    background: linear-gradient(rgba(85, 84, 84, 0.527),rgba(105, 102, 102, 0.5)), url(../img/Image-consulting.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+header{
+    position: relative;
+    max-width: 1550px;
+    padding: 20px 100px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 2%, rgba(26,50,217,0.89) 21%, rgba(0,212,255,1) 53%);
+}
+header .nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .menu-btn{
+    display: none;
+}
+header .nav img{
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+header .nav .navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: translateY(+8px);
+
+}
+header .nav .navigation li{
+    list-style: none;
+    margin-right: 30px;
+}
+header .nav .navigation li a{
+    text-decoration: none;
+    color: white;
+} 
+header .nav .navigation li a.active{
+    color: rgb(199, 196, 196);
+}
+header .moon-theme{
+    cursor: pointer;
+    font-size: 35px;
+    color: #003554;
+    margin-left: 20px;
+}
+header .nav .nav-plus{
+    transform: translateY(+10px);
+
+}
+header .nav .nav-plus{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -90px;
+}
+header .nav .nav-plus li{
+    list-style: none;
+}
+/* Customer */
+.customer .customer-big-title{
+    font-size: 50px;
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 70px;
+    color: #003554;
+}
+.customer .customer-container{
+    background-color: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 16px 0px rgba(34, 60, 80, 0.2);
+    margin-top: 60px;
+}
+
+.customer .customer-text{
+    margin-top: 20px;
+    line-height: 28px;
+    color: #1f5b7d;
+}
+/* Footer  */
+footer{
+    max-width: 1550px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 2%, rgba(26,50,217,0.89) 21%, rgba(0,212,255,1) 53%);
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+@media(max-width:576px){
+    section{
+        padding: 20px;
+    }
+    .main{
+        height: 200px;
+        margin-top: 80px;
+    }
+    header{
+        padding: 20px 20px;
+        padding-bottom: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    header .menu-btn{
+        display: block;
+        background: url(../img/menu.png);
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: 25px;
+    }
+    header .menu-btn.active{
+        z-index: 999;
+        background: url(../img/close-white.png) no-repeat;
+        background-size: 25px;
+        background-position: cover;
+        transition: .4s ease;
+    }
+    header .nav .navigation{
+        display: none ;
+    }
+    header .nav .navigation.active{
+        z-index: 888;
+        position: fixed;
+        background: white;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+        transition: .4s ease;
+        color: black;
+    }
+    header .nav .navigation.active li a{
+        color: black;
+        font-size: 14px;
+    }
+    header .nav .navigation.active li{
+        margin-top: 15px;
+    }
+    header .nav .brand{
+        display: none;
+    }
+    header .nav .nav-plus{
+        margin-left: 0;
+        margin-top: 10px;
+        transform: translateY(0);
+    }
+    /* Customer  */
+    .customer .customer-big-title{
+        font-size: 33px;
+        margin: 0;
+        margin-bottom: 70px;
+        margin-top: 180px;
+        color: #003554;
+    }
+    .customer .customer-container{
+        padding: 20px 30px;
+    }
+
+    .customer .customer-container .customer-text{
+        line-height: 35px;
+        color: #1f5b7d;
+        font-size: 15px;
+    }
+
+    /* dark mode  */
+
+    body.dark header .nav .navigation{
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,41,55,1) 35%, rgba(31,43,46,1) 100%);   
+    }
+    body.dark header .nav .navigation.active li a{
+        color: white;
+    }
+    
+
+    /* Footer  */
+    footer p{
+        font-size: 15px;
+    }
+}
+
+body.dark{
+    background-color: #333;
+}
+body.dark header{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,41,55,1) 35%, rgba(31,43,46,1) 100%)
+}
+body.dark .moon-theme{
+    color: white;
+}
+body.dark .about .about-title{
+    color: white;
+}
+body.dark .customer-container{
+    background-color: rgb(37,37,35);
+    -webkit-box-shadow: -2px 11px 28px -6px rgba(255, 255, 255, 0.18);
+    -moz-box-shadow: -2px 11px 28px -6px rgba(255, 255, 255, 0.18);
+    box-shadow: -2px 11px 28px -6px rgba(255, 255, 255, 0.18);
+
+}
+body.dark  .customer .customer-big-title{
+    color: chocolate;
+}
+body.dark .customer .customer-text{
+    color: white;
+}
+body.dark footer{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,41,55,1) 35%, rgba(31,43,46,1) 100%)
+}
